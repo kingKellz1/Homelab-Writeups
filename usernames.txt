@@ -1,0 +1,8 @@
+msfadmin
+user
+root
+postgres
+mysql
+tomcat55
+backup
+admin
